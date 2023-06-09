@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EVER AUTOMATION - Industrial Service and Technical Support</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-info img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            animateHeader();
+        });
+
+        function animateHeader() {
+            const header = document.querySelector('.header');
+            header.style.backgroundColor = getRandomColor();
+
+            setTimeout(animateHeader, 3000);
+        }
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <img src="/images/logo.png" alt="EVER AUTOMATION Logo" class="logo">
+    </div>
+    <div class="container">
+        <h2>Welcome to EVER AUTOMATION</h2>
+        <p>At EVER AUTOMATION, we are a leading provider of industrial service and technical support in the field of electrical automation. With our extensive expertise and commitment to excellence, we offer comprehensive solutions to optimize the performance and efficiency of your electrical systems.</p>
+        <p>Our highly skilled team of engineers and technicians specializes in the installation, maintenance, and repair of electrical equipment, including motors, control panels, sensors, and actuators. We utilize advanced automation technologies to streamline your processes, reduce downtime, and maximize productivity.</p>
+        <p>Our range of services includes:</p>
+        <ul>
+            <li>Electrical system design and integration</li>
+            <li>PLC programming and troubleshooting</li>
+            <li>HMI (Human-Machine Interface) development</li>
+            <li>Electrical panel fabrication</li>
+            <li>Electrical safety inspections and compliance</li>
+            <li>Energy management and optimization</li>
+            <li>Emergency electrical support</li>
+        </ul>
+        <p>With our deep industry knowledge and state-of-the-art tools, we can help you achieve seamless automation and reliable electrical control in your industrial processes. We work closely with our clients to understand their specific requirements and provide customized solutions tailored to their needs.</p>
+        <p>At EVER AUTOMATION, we are committed to delivering exceptional service and technical expertise to ensure the smooth operation of your electrical automation systems. Whether you need assistance with installation, troubleshooting, or ongoing maintenance, our dedicated team is ready to support you.</p>
+        <h3>Contact Information</h3>
+        <div class="contact-info">
+            <img src="/images/phone-icon.png" alt="Phone Icon">
+            <p>+1 (123) 456-7890</p>
+        </div>
+        <div class="contact-info">
+            <img src="/images/email-icon.png" alt="Email Icon">
+            <p>info@everautomation.com</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2023 EVER AUTOMATION. All rights reserved.</p>
+    </div>
+</body>
+</html>

@@ -33,6 +33,20 @@
 
         p {
             margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .service-item {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f1f1f1;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
         }
 
         .contact-info {
@@ -58,6 +72,7 @@
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {
             animateHeader();
+            animateServiceItems();
         });
 
         function animateHeader() {
@@ -65,6 +80,15 @@
             header.style.backgroundColor = getRandomColor();
 
             setTimeout(animateHeader, 3000);
+        }
+
+        function animateServiceItems() {
+            const serviceItems = document.querySelectorAll('.service-item');
+            serviceItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
         }
 
         function getRandomColor() {
@@ -83,18 +107,41 @@
     </div>
     <div class="container">
         <h2>Welcome to EVER AUTOMATION</h2>
-        <p>At EVER AUTOMATION, we provide top-quality industrial service and technical support to meet your automation needs. Our team of experts is dedicated to delivering innovative solutions and ensuring maximum productivity for your business.</p>
+        <p>At EVER AUTOMATION, we are a leading provider of industrial service and technical support in the field of electrical automation. With our extensive expertise and commitment to excellence, we offer comprehensive solutions to optimize the performance and efficiency of your electrical systems.</p>
+        <p>Our highly skilled team of engineers and technicians specializes in the installation, maintenance, and repair of electrical equipment, including motors, control panels, sensors, and actuators. We utilize advanced automation technologies to streamline your processes, reduce downtime, and maximize productivity.</p>
         <h3>Our Services</h3>
-        <ul>
-            <li>Industrial Equipment Installation</li>
-            <li>Machinery Maintenance and Repair</li>
-            <li>Automation System Design</li>
-            <li>Process Optimization</li>
-            <li>Technical Support and Troubleshooting</li>
-        </ul>
+        <div class="service-item">
+            <h4>Electrical System Design and Integration</h4>
+            <p>Our experts will work closely with you to design and integrate efficient electrical systems that meet your specific requirements. We consider factors such as power distribution, wiring, and control strategies to ensure seamless operation.</p>
+        </div>
+        <div class="service-item">
+            <h4>PLC Programming and Troubleshooting</h4>
+            <p>We specialize in PLC (Programmable Logic Controller) programming to automate complex processes. Our team can develop custom PLC programs and provide efficient troubleshooting to ensure reliable and precise control of your electrical systems.</p>
+        </div>
+        <div class="service-item">
+            <h4>HMI (Human-Machine Interface) Development</h4>
+            <p>With our HMI development services, we create intuitive interfaces that allow operators to monitor and control your electrical automation systems effectively. Our HMIs enhance user experience and facilitate efficient decision-making.</p>
+        </div>
+        <div class="service-item">
+            <h4>Electrical Panel Fabrication</h4>
+            <p>We offer reliable electrical panel fabrication services, ensuring the assembly of high-quality control panels that comply with industry standards. Our panels are designed for optimal performance, safety, and ease of maintenance.</p>
+        </div>
+        <div class="service-item">
+            <h4>Electrical Safety Inspections and Compliance</h4>
+            <p>At EVER AUTOMATION, we prioritize safety. Our team conducts thorough electrical safety inspections to identify potential hazards and ensure compliance with relevant regulations. We provide recommendations and implement safety measures to protect your workforce and assets.</p>
+        </div>
+        <div class="service-item">
+            <h4>Energy Management and Optimization</h4>
+            <p>Our energy management solutions help you optimize energy usage, reduce costs, and minimize environmental impact. We analyze your electrical systems, identify energy-saving opportunities, and implement efficient strategies to improve sustainability.</p>
+        </div>
+        <div class="service-item">
+            <h4>Emergency Electrical Support</h4>
+            <p>We understand that electrical emergencies can disrupt your operations. Our team is available 24/7 to provide immediate technical support and resolve critical electrical issues efficiently, minimizing downtime and ensuring business continuity.</p>
+        </div>
+        <h3>Contact Information</h3>
         <div class="contact-info">
             <img src="/images/phone-icon.png" alt="Phone Icon">
-            <p>+1 (123) 456-7890</p>
+            <p>+91 7046293456</p>
         </div>
         <div class="contact-info">
             <img src="/images/email-icon.png" alt="Email Icon">
